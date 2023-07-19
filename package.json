@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "wp-scripts start src/index.js --output-path=build/theme",
+    "build": "wp-scripts build src/index.js --output-path=build/theme",
+    "blocks-start": "wp-scripts start --webpack-src-dir=blocks --webpack-copy-php --output-path=build/blocks",
+    "blocks-build": "wp-scripts build --webpack-src-dir=blocks --webpack-copy-php --output-path=build/blocks",
+    "develop": "npm-run-all --parallel start blocks-start"
   },
   "keywords": [],
   "author": "",

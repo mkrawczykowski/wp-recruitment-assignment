@@ -2,7 +2,7 @@
   "name": "acf/testblock",
   "title": "Test Block",
   "description": "A test block for new compilation.",
-  "style": "file:./index.css",
+  "style": "file:./index.scss",
   "script": "file:./index.js",
   "category": "design",
   "icon": "list-view",

@@ -4,7 +4,16 @@
   <div class="container">
     <hr>
     <div class="row">
-      <div class="col col--padding">
+      <div class="col">
+        <?php get_sidebar('sidebar-column-one'); ?>
+      </div>
+      <div class="col">
+        
+      </div>
+      <div class="col">
+        
+      </div>
+      <div class="col">
         
       </div>
     </div>

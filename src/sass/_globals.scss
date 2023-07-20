@@ -1,0 +1,57 @@
+@use './variables' as variables;
+
+// * {
+//   outline: 1px solid #19ff04;
+//   background-color: #b1ddad;
+// }
+
+html {
+  font-size: 10px;
+  font-size: 62.5%;
+  scrollbar-color: variables.$purple1 variables.$pink1;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: variables.$purple1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: variables.$pink1;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  padding: 0 3rem;
+  margin: 0 auto;
+
+  @include variables.media-up(xxl) {
+    max-width: 125rem;
+  }
+
+  .row {
+    display: flex;
+    margin-left: -3rem;
+    margin-right: -3rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    .col {
+      padding-right: 3rem;
+      padding-left: 3rem;
+      width: 100%;
+    }
+  }
+}

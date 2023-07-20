@@ -1,0 +1,8 @@
+@import './main-nav.scss';
+@import './hamburger.scss';
+@import './main-menu.scss';
+
+.header {
+  position: relative;
+  z-index: 10;
+}

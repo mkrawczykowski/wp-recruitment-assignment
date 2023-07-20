@@ -17,14 +17,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- optionally increase loading priority -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&Inter:wght@700display=swap">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap">
 
   <!-- async CSS -->
-  <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&Inter:wght@700display=swap">
+  <link rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap">
 
   <!-- no-JS fallback -->
   <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&Inter:wght@700display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap">
   </noscript>
 
   <title><?php the_title(); ?></title>

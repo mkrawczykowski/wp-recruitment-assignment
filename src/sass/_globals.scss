@@ -8,18 +8,18 @@
 html {
   font-size: 10px;
   font-size: 62.5%;
-  scrollbar-color: variables.$purple1 variables.$pink1;
+  // scrollbar-color: variables.$purple1 variables.$pink1;
   scrollbar-width: thin;
 }
 
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
-  background-color: variables.$purple1;
+  // background-color: variables.$purple1;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: variables.$pink1;
+  // background: variables.$pink1;
 }
 
 body {
@@ -48,10 +48,15 @@ img {
     justify-content: flex-start;
     flex-wrap: wrap;
 
+    &--footer {
+      .col {
+        flex-grow: 1;
+      }
+    }
+
     .col {
       padding-right: 3rem;
       padding-left: 3rem;
-      width: 100%;
     }
   }
 }

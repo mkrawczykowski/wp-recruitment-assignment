@@ -15,7 +15,7 @@ function assignment_widgets_init() {
 	) );
 	register_sidebar( array(
 		'name'          => __( 'Footer column 2 PL', 'assignment-theme' ),
-		'id'            => 'sidebar_column_two_pl',
+		'id'            => 'footer_column_two_pl',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -23,7 +23,7 @@ function assignment_widgets_init() {
 	) );
 	register_sidebar( array(
 		'name'          => __( 'Footer column 3 PL', 'assignment-theme' ),
-		'id'            => 'sidebar_column_three_pl',
+		'id'            => 'footer_column_three_pl',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -39,7 +39,7 @@ function assignment_widgets_init() {
 	) );
 	register_sidebar( array(
 		'name'          => __( 'Footer column 2 EN', 'assignment-theme' ),
-		'id'            => 'sidebar_column_two_en',
+		'id'            => 'footer_column_two_en',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -47,7 +47,7 @@ function assignment_widgets_init() {
 	) );
 	register_sidebar( array(
 		'name'          => __( 'Footer column 3 EN', 'assignment-theme' ),
-		'id'            => 'sidebar_column_three_en',
+		'id'            => 'footer_column_three_en',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',

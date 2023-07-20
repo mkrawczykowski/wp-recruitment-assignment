@@ -1,0 +1,23 @@
+{
+  "name": "acf/hero-slider",
+  "title": "Hero slider",
+  "description": "A slider for hero section",
+  "style": "file:./index.scss",
+  "script": "file:./index.js",
+  "category": "design",
+  "icon": "list-view",
+  "keywords": [
+    "testimonial",
+    "quote"
+  ],
+  "apiVersion": 2,
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "hero-slider.php"
+  },
+  "align": "full",
+  "supports": {
+    "align": true,
+    "anchor": true
+  }
+}

@@ -1,3 +1,5 @@
+<?php defined('ABSPATH') or die; ?>  
+
 <?php
 /**
  * Register our sidebars and widgetized areas.
@@ -6,7 +8,7 @@
 function assignment_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Footer column 1', 'assignment-theme' ),
-		'id'            => 'sidebar-column-one',
+		'id'            => 'footer_column_one',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -14,7 +16,23 @@ function assignment_widgets_init() {
 	) );
 	register_sidebar( array(
 		'name'          => __( 'Footer column 2', 'assignment-theme' ),
-		'id'            => 'sidebar-column-two',
+		'id'            => 'sidebar_column_two',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer column 3', 'assignment-theme' ),
+		'id'            => 'sidebar_column_three',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer column 4', 'assignment-theme' ),
+		'id'            => 'sidebar_column_four',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',

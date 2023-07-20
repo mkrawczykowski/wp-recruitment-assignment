@@ -3,36 +3,51 @@
 <?php
 /**
  * Register our sidebars and widgetized areas.
- *
  */
 function assignment_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Footer column 1', 'assignment-theme' ),
-		'id'            => 'footer_column_one',
+		'name'          => __( 'Footer column 1 PL', 'assignment-theme' ),
+		'id'            => 'footer_column_one_pl',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Footer column 2', 'assignment-theme' ),
-		'id'            => 'sidebar_column_two',
+		'name'          => __( 'Footer column 2 PL', 'assignment-theme' ),
+		'id'            => 'sidebar_column_two_pl',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Footer column 3', 'assignment-theme' ),
-		'id'            => 'sidebar_column_three',
+		'name'          => __( 'Footer column 3 PL', 'assignment-theme' ),
+		'id'            => 'sidebar_column_three_pl',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
 	register_sidebar( array(
-		'name'          => __( 'Footer column 4', 'assignment-theme' ),
-		'id'            => 'sidebar_column_four',
+		'name'          => __( 'Footer column 1 EN', 'assignment-theme' ),
+		'id'            => 'footer_column_one_en',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer column 2 EN', 'assignment-theme' ),
+		'id'            => 'sidebar_column_two_en',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer column 3 EN', 'assignment-theme' ),
+		'id'            => 'sidebar_column_three_en',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -45,7 +60,6 @@ add_action( 'widgets_init', 'assignment_widgets_init' );
 
 /**
  * Adding posiibility to upload a logo in Appearance->Header
- *
  */
 function assignment_custom_logo_setup() {
 	$defaults = array(

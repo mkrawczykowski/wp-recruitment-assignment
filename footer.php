@@ -12,14 +12,18 @@
         <?php endif;?>
       
         <?php 
+          $current_language = '';
+          if (function_exists('pll_current_language')){
+            $current_language = pll_current_language();
+          }
           get_template_part('template-parts/sidebar', 'footer', array(
-            'sidebar' => 'footer_column_one'
+            'sidebar' => 'footer_column_one_' . $current_language
           ));
           get_template_part('template-parts/sidebar', 'footer', array(
-            'sidebar' => 'footer_column_two'
+            'sidebar' => 'footer_column_two_' . $current_language
           ));
           get_template_part('template-parts/sidebar', 'footer', array(
-            'sidebar' => 'footer_column_three'
+            'sidebar' => 'footer_column_three_' . $current_language
           ));
         ?>
       </div>

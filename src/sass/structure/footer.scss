@@ -1,1 +1,14 @@
-.footer {}
+@use '../variables' as variables;
+
+.footer {
+  background-color: variables.$almostBlack;
+
+  &__copyright {
+    color: variables.$white;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+  }
+}

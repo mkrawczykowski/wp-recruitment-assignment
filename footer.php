@@ -2,8 +2,7 @@
     
 <footer class="footer">
   <div class="container">
-    <hr>
-    <div class="row">
+    <div class="row row--footer">
       <?php 
         if (has_custom_logo()) : ?>
           <div class="col">
@@ -26,6 +25,11 @@
             'sidebar' => 'footer_column_three_' . $current_language
           ));
         ?>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p class="footer__copyright">Copyright © <?php echo date("Y"); ?>. All rights reserved.</p>
       </div>
     </div>
   </div>   

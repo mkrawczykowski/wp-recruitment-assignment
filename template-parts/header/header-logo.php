@@ -2,7 +2,7 @@
 
 <?php
   if (has_custom_logo()) : ?>
-    <div class="header-logo">
+    <div class="logo">
       <?php the_custom_logo(); ?>
     </div>
-  <?php endif;?>
+  <?php endif; ?>

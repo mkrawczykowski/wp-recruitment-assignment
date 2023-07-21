@@ -1,3 +1,20 @@
 @use '../variables' as variables;
 
-.main-menu {}
+.main-menu {
+  &__menu {
+    display: flex;
+
+    .pll-parent-menu-item {
+      &.active {
+        .sub-menu {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      .sub-menu {
+        display: none;
+      }
+    }
+  }
+}

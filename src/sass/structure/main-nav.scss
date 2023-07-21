@@ -1,3 +1,5 @@
 @use '../variables' as variables;
 
-.main-nav {}
+.main-nav {
+  display: flex;
+}

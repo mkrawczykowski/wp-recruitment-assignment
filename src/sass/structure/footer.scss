@@ -3,12 +3,16 @@
 .footer {
   background-color: variables.$almostBlack;
 
-  &__copyright {
+  p {
     color: variables.$white;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.4rem;
     line-height: 2.4rem;
     font-weight: 400;
+  }
+
+  &__copyright {
+    text-align: center;
   }
 }

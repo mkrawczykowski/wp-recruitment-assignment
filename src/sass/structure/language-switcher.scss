@@ -1,0 +1,20 @@
+.language-switcher {
+  .pll-parent-menu-item {
+    position: relative;
+    margin-left: auto;
+
+    &.active {
+      .sub-menu {
+        position: absolute;
+        top: 2rem;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .sub-menu {
+      display: none;
+    }
+  }
+}

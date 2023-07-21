@@ -1,9 +1,18 @@
 @import './main-nav.scss';
 @import './hamburger.scss';
 @import './main-menu.scss';
+@import './language-switcher.scss';
 
 .header {
   position: relative;
   z-index: 10;
   display: flex;
+
+  .container {
+    .row {
+      .col {
+        width: 100%;
+      }
+    }
+  }
 }

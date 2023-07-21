@@ -6,6 +6,11 @@
   height: 3rem;
   margin: 0 -0.4rem 0 0;
   cursor: pointer;
+  display: inline-block;
+
+  @include variables.media-up(xl) {
+    display: none;
+  }
 
   span {
     position: absolute;

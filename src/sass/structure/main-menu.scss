@@ -1,22 +1,54 @@
 @use '../variables' as variables;
 
 .main-menu {
-  display: flex;
-  justify-content: center;
-  flex-grow: 1;
-  margin-top: 0.9rem;
-  margin-left: 5.5rem;
+  @include variables.media-down(xl) {
+    order: 4;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 2rem 0;
+    background-color: rgb(255 255 255 / 17%);
+    position: absolute;
+    top: 6rem;
+    left: 100%;
+    transition: all 0.3s ease;
+  }
 
-  .menu-item {
-    &>a {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 1.5rem;
-      line-height: 2rem;
-      font-weight: 600;
-      letter-spacing: 2.5px;
-      color: variables.$white;
-      text-transform: uppercase;
-      padding: 1rem 3.5rem;
+  &.active {
+    left: 0;
+    transition: all 0.3s ease;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    flex-direction: column;
+
+    @include variables.media-up(xl) {
+      flex-direction: row;
+      margin-top: 0.9rem;
+      margin-left: 5.5rem;
+    }
+
+    .menu-item {
+      @include variables.media-down(xl) {
+        text-align: center;
+      }
+
+      &>a {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 600;
+        letter-spacing: 2.5px;
+        color: variables.$white;
+        text-transform: uppercase;
+        padding: 1rem 3.5rem;
+
+        @include variables.media-down(xl) {
+          display: inline-block;
+        }
+      }
     }
   }
 }

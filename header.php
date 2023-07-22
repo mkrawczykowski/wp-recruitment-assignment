@@ -37,7 +37,7 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <nav class="main-nav" id="js-main-nav">
+        <nav class="main-nav">
           <?php get_template_part( 'template-parts/header/header', 'logo' ); ?>
           <?php get_template_part( 'template-parts/header/header', 'main-menu' ); ?>
           <?php get_template_part( 'template-parts/header/header', 'language-switcher' ); ?>

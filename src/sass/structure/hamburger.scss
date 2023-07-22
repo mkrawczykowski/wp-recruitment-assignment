@@ -1,13 +1,16 @@
 @use '../variables' as variables;
 
 .hamburger {
+  @include variables.media-down(xl) {
+    order: 2;
+  }
+
   position: relative;
   width: 3rem;
   height: 3rem;
   margin: 0 -0.4rem 0 0;
   cursor: pointer;
-  // display: inline-block;
-  display: none;
+  display: inline-block;
 
   @include variables.media-up(xl) {
     display: none;

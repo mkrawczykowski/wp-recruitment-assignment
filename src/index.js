@@ -1,2 +1,3 @@
 import './sass/index.scss';
-import './js/toggleClassOnClick.js';
+import './js/language-switcher.js';
+import './js/hamburger.js';

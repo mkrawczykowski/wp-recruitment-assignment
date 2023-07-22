@@ -1,16 +1,29 @@
 @use '../variables' as variables;
 
 .language-switcher {
-  background-color: variables.$whiteAlpha1;
-  min-width: 11.9rem;
-  min-height: 4.2rem;
+  @include variables.media-down(xl) {
+    order: 2;
+  }
+
+  min-width: 6.5rem;
+  min-height: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-right: -2rem;
+  background-color: variables.$whiteAlpha1;
+
+  @include variables.media-up(xl) {
+    min-width: 11.9rem;
+    min-height: 4.2rem;
+    margin-right: -2rem;
+  }
 
   .pll-parent-menu-item {
+    @include variables.media-down(xl) {
+      margin-left: -1.7rem;
+    }
+
     &>a {
       position: relative;
 
@@ -22,16 +35,22 @@
         height: 0.5rem;
         display: inline-block;
         position: absolute;
-        right: -0.3rem;
-        top: 0.3rem;
+        right: -2rem;
+        top: 0.1rem;
         content: '';
         transform: rotateZ(0);
         transition: all 0.3s ease;
+
+        @include variables.media-up(xl) {
+          right: -0.3rem;
+          top: 0.3rem;
+        }
       }
     }
 
     a {
       span {
+        display: none;
         font-family: 'Open Sans', sans-serif;
         font-size: 1.4rem;
         line-height: 100%;
@@ -39,6 +58,10 @@
         margin-right: 0.3rem;
         padding-right: 1.2rem;
         padding-left: 0.7rem;
+
+        @include variables.media-up(xl) {
+          display: inline-block;
+        }
       }
     }
 
@@ -53,14 +76,26 @@
       .sub-menu {
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.10127801120448177) 0%, rgba(255, 255, 255, 0.1) 83%, rgba(204, 204, 204, 0.1) 100%);
         position: absolute;
-        top: 4.2rem;
+        top: 3rem;
         left: 0;
         display: flex;
         flex-direction: column;
         width: 100%;
         padding: 1.5rem 1.5rem 1rem 1.5rem;
 
+        @include variables.media-up(xl) {
+          top: 4.2rem;
+        }
+
         .lang-item {
+          @include variables.media-down(xl) {
+            text-align: center;
+          }
+
+          &:nth-of-type(1) {
+            margin-bottom: 1rem;
+          }
+
           &>a {
             padding-bottom: 1rem;
             display: inline-block;

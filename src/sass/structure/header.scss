@@ -5,9 +5,11 @@
 @import './language-switcher.scss';
 
 .header {
-  position: relative;
+  position: absolute;
   z-index: 10;
-  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
 
   .container {
     .row {

@@ -7,9 +7,15 @@
 	<main class="main">
 
 		<?php
-			// the_content();
+			the_content();
 			
 		?> 
+		<?php
+			// global $_wp_additional_image_sizes; 
+			// print '<pre>'; 
+			// print_r( $_wp_additional_image_sizes ); 
+			// print '</pre>';
+		?>
 		mnb
 		<br>
 		<br>

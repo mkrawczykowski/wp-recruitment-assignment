@@ -1,0 +1,118 @@
+<?php defined('ABSPATH') or die; ?>
+<section class="hero-slider">
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+  <?php
+  if( have_rows('slides') ): ?>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+
+        <?php    
+        while( have_rows('slides') ) : the_row();
+          $content = get_sub_field('content');
+          $heading_1 = $content['heading_1'];
+          $heading_2 = $content['heading_2'];
+          $text = $content['text'];
+          $link_label = $content['link_label'];
+          $button = $content['button']; ?>
+
+          <div class="swiper-slide">
+            <div class="swiper-slide__background-image"></div>
+            <div class="swiper-slide__content">
+              <?php
+                echo $heading_1 ? '<h3 class="swiper-slide__heading-small">' . $heading_1 . '</h3>' : NULL;
+                echo $heading_2 ? '<h3 class="swiper-slide__heading-big">' . $heading_2 . '</h3>' : NULL;
+                echo $text ? '<div class="swiper-slide__content">' . $text . '</div>' : NULL;
+                if ($link_label && $button){
+                  echo '
+                    <div class="button">
+                      <a class="button__link" href="' . $button .'">' . $link_label . '</a>
+                    </div>
+                  ';
+                }
+              ?>              
+            </div>
+          </div>
+        <?php  
+        endwhile; ?>
+
+      </div>
+    </div>
+  <?php
+  endif; ?>
+</section>
+
+mnb
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		nn
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		nn
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		nn
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		nn

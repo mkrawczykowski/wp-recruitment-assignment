@@ -2,7 +2,7 @@
   "name": "acf/hero-slider",
   "title": "Hero slider",
   "description": "A slider for hero section",
-  "style": "file:./index.scss",
+  "style": "file:./index.css",
   "script": "file:./index.js",
   "category": "design",
   "icon": "list-view",

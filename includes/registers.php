@@ -78,4 +78,5 @@ add_action( 'after_setup_theme', 'assignment_custom_logo_setup' );
 
 
 
-// add_image_size( string $name, int $width, int $height, bool|array $crop = false )
+add_image_size('324', 324, '', false);
+add_image_size('597', 597, '', false);

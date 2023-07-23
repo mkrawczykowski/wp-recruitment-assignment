@@ -5,40 +5,9 @@
 //   background-color: #b1ddad;
 // }
 
-/* Preferred box-sizing value */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0px;
-  padding: 0px;
-}
-
-html,
-body {
-  overflow: auto;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-pre {
-  white-space: pre;
-  overflow-x: auto;
-}
-
-body {
+html {
   font-size: 10px;
   font-size: 62.5%;
-}
-
-html {
-
   // scrollbar-color: variables.$purple1 variables.$pink1;
   scrollbar-width: thin;
 }

@@ -23,6 +23,7 @@
     justify-content: center;
     flex-grow: 1;
     flex-direction: column;
+    list-style: none;
 
     @include variables.media-up(xl) {
       flex-direction: row;
@@ -44,6 +45,7 @@
         color: variables.$white;
         text-transform: uppercase;
         padding: 1rem 3.5rem;
+        text-decoration: none;
 
         @include variables.media-down(xl) {
           display: inline-block;

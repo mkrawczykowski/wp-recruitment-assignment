@@ -76,7 +76,8 @@ function assignment_custom_logo_setup() {
 add_theme_support( 'custom-logo' );
 add_action( 'after_setup_theme', 'assignment_custom_logo_setup' );
 
-
-
+add_image_size('3840', 3840, '', false);
 add_image_size('324', 324, '', false);
 add_image_size('597', 597, '', false);
+
+add_theme_support ('align-wide');

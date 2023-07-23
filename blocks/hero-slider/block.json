@@ -19,5 +19,11 @@
   "supports": {
     "align": true,
     "anchor": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
   }
 }

@@ -5,23 +5,26 @@
     order: 2;
   }
 
-  min-width: 6.5rem;
-  min-height: 3rem;
+  min-width: 56px;
+  min-height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   background-color: variables.$whiteAlpha1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
   @include variables.media-up(xl) {
-    min-width: 11.9rem;
-    min-height: 4.2rem;
-    margin-right: -2rem;
+    min-width: 119px;
+    min-height: 42px;
+    margin-right: -20px;
   }
 
   .pll-parent-menu-item {
     @include variables.media-down(xl) {
-      margin-left: -1.7rem;
+      margin-left: -17px;
     }
 
     &>a {
@@ -31,19 +34,19 @@
         background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="4.994" viewBox="0 0 10 4.994"><path d="M.059,176.081a.412.412,0,0,1,.268-.112.336.336,0,0,1,.246.089l4.4,4.062,4.4-4.062a.363.363,0,1,1,.491.536L5.214,180.88a.4.4,0,0,1-.491,0L.081,176.594A.378.378,0,0,1,.059,176.081Z" transform="translate(0.031 -175.969)" fill="%23fff"/></svg>');
         background-repeat: no-repeat;
         background-position: center;
-        width: 1rem;
-        height: 0.5rem;
+        width: 10px;
+        height: 5px;
         display: inline-block;
         position: absolute;
-        right: -2rem;
-        top: 0.1rem;
+        right: -20px;
+        top: 1px;
         content: '';
         transform: rotateZ(0);
         transition: all 0.3s ease;
 
         @include variables.media-up(xl) {
-          right: -0.3rem;
-          top: 0.3rem;
+          right: -3px;
+          top: 9px;
         }
       }
     }
@@ -52,15 +55,22 @@
       span {
         display: none;
         font-family: 'Open Sans', sans-serif;
-        font-size: 1.4rem;
+        font-size: variables.pxtorem(14);
         line-height: 100%;
         color: variables.$white;
-        margin-right: 0.3rem;
-        padding-right: 1.2rem;
-        padding-left: 0.7rem;
+        margin-right: 3px;
+        padding-right: 12px;
+        padding-left: 7px;
 
         @include variables.media-up(xl) {
           display: inline-block;
+        }
+      }
+
+      &:hover {
+        span {
+          color: variables.$green;
+          transition: all 0.3s ease;
         }
       }
     }
@@ -76,15 +86,17 @@
       .sub-menu {
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.10127801120448177) 0%, rgba(255, 255, 255, 0.1) 83%, rgba(204, 204, 204, 0.1) 100%);
         position: absolute;
-        top: 3rem;
+        top: 30px;
         left: 0;
         display: flex;
         flex-direction: column;
         width: 100%;
-        padding: 1.5rem 1.5rem 1rem 1.5rem;
+        padding: 15px 15px 10px 15px;
+        list-style: none;
+        margin: 0;
 
         @include variables.media-up(xl) {
-          top: 4.2rem;
+          top: 42px;
         }
 
         .lang-item {
@@ -93,12 +105,20 @@
           }
 
           &:nth-of-type(1) {
-            margin-bottom: 1rem;
+            margin-bottom: 10px;
           }
 
           &>a {
-            padding-bottom: 1rem;
+            padding-bottom: 10px;
             display: inline-block;
+            transition: all 0.3s ease;
+
+            &:hover {
+              span {
+                color: variables.$green;
+                transition: all 0.3s ease;
+              }
+            }
           }
         }
       }

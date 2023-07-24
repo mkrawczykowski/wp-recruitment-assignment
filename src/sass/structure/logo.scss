@@ -1,13 +1,13 @@
 @use '../variables' as variables;
 
 .logo {
-  width: 13.4rem;
-  height: 3rem;
+  width: variables.pxtorem(134);
+  height: variables.pxtorem(30);
   display: inline-block;
 
   @include variables.media-up(xl) {
-    width: 20.4rem;
-    height: 3.3rem;
-    margin-left: 2.1rem;
+    width: variables.pxtorem(204);
+    height: variables.pxtorem(33);
+    margin-left: variables.pxtorem(21);
   }
 }

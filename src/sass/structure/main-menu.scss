@@ -4,11 +4,11 @@
   @include variables.media-down(xl) {
     order: 4;
     width: 100%;
-    margin-top: 2rem;
-    padding: 2rem 0;
+    margin-top: 20px;
+    padding: 20px 0;
     background-color: rgb(255 255 255 / 17%);
     position: absolute;
-    top: 6rem;
+    top: 60px;
     left: 100%;
     transition: all 0.3s ease;
   }
@@ -23,11 +23,12 @@
     justify-content: center;
     flex-grow: 1;
     flex-direction: column;
+    list-style: none;
 
     @include variables.media-up(xl) {
       flex-direction: row;
-      margin-top: 0.9rem;
-      margin-left: 5.5rem;
+      margin-top: 9px;
+      margin-left: 55px;
     }
 
     .menu-item {
@@ -37,16 +38,23 @@
 
       &>a {
         font-family: 'Open Sans', sans-serif;
-        font-size: 1.5rem;
-        line-height: 2rem;
+        font-size: variables.pxtorem(15);
+        line-height: variables.pxtorem(20);
         font-weight: 600;
         letter-spacing: 2.5px;
         color: variables.$white;
         text-transform: uppercase;
-        padding: 1rem 3.5rem;
+        padding: 10px 35px;
+        text-decoration: none;
+        transition: all 0.3s ease;
 
         @include variables.media-down(xl) {
           display: inline-block;
+        }
+
+        &:hover {
+          transition: all 0.3s ease;
+          color: variables.$green;
         }
       }
     }

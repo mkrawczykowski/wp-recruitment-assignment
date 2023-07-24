@@ -2,6 +2,7 @@ $white: #ffffff;
 $whiteAlpha1: rgba(255, 255, 255, 0.1);
 $black: #000000;
 $almostBlack: #07141D;
+$green: #1ddb49;
 
 $breakpoints: (
   "xs": 0,
@@ -12,6 +13,11 @@ $breakpoints: (
   "xxl": 1400,
   "xxxl": 1800
 );
+
+@function pxtorem($pixels) {
+  $result: $pixels * 0.0625;
+  @return $result*1rem;
+}
 
 @mixin media-down($breakpoint) {
   $pixelsBreakpoint: map-get($breakpoints, $breakpoint) - 1px;

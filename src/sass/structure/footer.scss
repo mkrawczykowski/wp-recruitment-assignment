@@ -7,8 +7,8 @@
     color: variables.$white;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.4rem;
-    line-height: 2.4rem;
+    font-size: variables.pxtorem(14);
+    line-height: variables.pxtorem(24);
     font-weight: 400;
   }
 

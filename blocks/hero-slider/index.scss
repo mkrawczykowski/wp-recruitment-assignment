@@ -1,7 +1,7 @@
 @use '../../src/sass/variables' as variables;
 
 .hero-slider {
-  height: 91.5rem;
+  // height: 915px;
 
   .swiper {
     height: 100%;
@@ -20,28 +20,28 @@
         }
 
         &__content {
-          padding-top: 30.3rem;
+          // padding-top: 303px;
           margin: 0 auto;
           display: block;
           position: relative;
           width: 100%;
           height: 100%;
-          max-width: 143.1rem;
+          max-width: 1431px;
           z-index: 2;
 
           .swiper-slide__heading-small {
             font-family: 'Open Sans', sans-serif;
-            font-size: 3.6rem;
+            font-size: variables.pxtorem(36);
             line-height: 100%;
             font-weight: 800;
             text-transform: uppercase;
             color: variables.$white;
-            margin: 0 0 1rem 0;
+            margin: 0 0 10px 0;
           }
 
           .swiper-slide__heading-big {
             font-family: 'Open Sans', sans-serif;
-            font-size: 6rem;
+            font-size: variables.pxtorem(60);
             line-height: 100%;
             font-weight: 800;
             text-transform: uppercase;
@@ -50,31 +50,42 @@
           }
 
           .swiper-slide__text {
-            font-family: 'Open Sans', sans-serif;
-            font-size: 1.6rem;
-            line-height: 3rem;
-            font-weight: 600;
-            color: variables.$white;
-            margin: 3.7rem 0 0 0;
+
+            margin: 37px 0 0 0;
 
             ul {
               list-style-position: outside;
               list-style: none;
+              margin: 0;
+              padding: 0;
 
               li {
-                padding-left: 2.1rem;
+                padding-left: 21px;
                 position: relative;
+                font-family: 'Open Sans', sans-serif;
+                font-size: variables.pxtorem(16);
+                line-height: variables.pxtorem(30);
+                font-weight: 600;
+                color: variables.$white;
 
                 &:before {
                   content: '';
-                  width: 1rem;
-                  height: 1rem;
+                  width: 10px;
+                  height: 10px;
                   display: inline-block;
                   background-color: variables.$white;
                   position: relative;
-                  left: -1.6rem;
-                  margin-bottom: 0.4rem;
+                  left: -16px;
+                  margin-bottom: 4px;
                 }
+              }
+
+              p {
+                font-family: 'Open Sans', sans-serif;
+                font-size: variables.pxtorem(16);
+                line-height: variables.pxtorem(30);
+                font-weight: 600;
+                color: variables.$white;
               }
             }
           }

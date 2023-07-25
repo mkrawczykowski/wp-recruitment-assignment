@@ -17,7 +17,6 @@ add_action( 'wp_enqueue_scripts', 'remove_wp_block_library_css', 100 );
  * Register ACF blocks via block.json 
  */
 function register_acf_blocks() {
-    register_block_type( get_template_directory() . '/build/blocks/block-1');
     register_block_type( get_template_directory() . '/build/blocks/hero-slider');
 }
 add_action( 'init', 'register_acf_blocks', 5 );

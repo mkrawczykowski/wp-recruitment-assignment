@@ -31,7 +31,7 @@
 
           <div class="swiper-slide">
             <div class="swiper-slide__background-image">
-							<?php echo wp_get_attachment_image($slide_image, '', "", array( 
+							<?php echo wp_get_attachment_image($slide_image, '', '', array( 
                 'class' => 'img-responsive', 
                 'loading' => 'eager', 
                 'sizes' => "(max-width: 576px) 597px, 100vw"

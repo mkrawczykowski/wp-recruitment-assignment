@@ -1,0 +1,29 @@
+@use '../variables' as variables;
+
+.double-heading {
+  display: flex;
+  flex-wrap: wrap;
+
+  &--center {}
+
+  &__heading {
+    font-family: 'Open Sans', sans-serif;
+    font-size: variables.pxtorem(48);
+    line-height: 100%;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: variables.$almostBlack2;
+    margin: 0;
+  }
+
+  &__color {
+    background-color: variables.$green2;
+    padding: 0rem 0.3rem 0 0.4rem;
+    margin-left: 0.4rem;
+
+    .double-heading__heading {
+      color: variables.$white;
+      margin: 0;
+    }
+  }
+}

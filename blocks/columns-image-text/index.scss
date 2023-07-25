@@ -1,0 +1,73 @@
+@use '../../src/sass/variables' as variables;
+
+.columns-image-text {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    padding: 80px 0 112px 0;
+
+    @include variables.media-up(xxl) {
+      max-width: 1304px;
+    }
+
+    .row {
+      display: flex;
+      margin-left: -20px;
+      margin-right: -20px;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+
+      .col {
+        padding-right: 20px;
+        padding-left: 20px;
+
+        &:nth-child(1) {
+          width: 636px;
+        }
+
+        &:nth-child(2) {
+          width: 598px;
+        }
+      }
+    }
+  }
+
+  .double-heading {
+    position: relative;
+    top: -9px;
+    left: 1px;
+    margin: 0 0 29px 0;
+  }
+
+  p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: variables.pxtorem(17);
+    line-height: variables.pxtorem(30);
+    font-weight: 400;
+    color: variables.$blueGray;
+    margin: 0 0 30px 0;
+    padding: 0;
+
+    &:nth-last-of-type(2) {
+      margin: 0 0 45px 0;
+    }
+
+    &:last-of-type {
+      margin: 0;
+    }
+
+    a {
+      color: variables.$green;
+      font-family: 'Open Sans', sans-serif;
+      font-size: variables.pxtorem(17);
+      line-height: variables.pxtorem(34);
+      font-weight: 600;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

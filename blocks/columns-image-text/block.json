@@ -1,0 +1,31 @@
+{
+  "name": "acf/columns-image-text",
+  "title": "Two columns with image or text",
+  "description": "Place an image or text to both columns",
+  "style": "file:./index.css",
+  "script": "file:./index.js",
+  "category": "design",
+  "icon": "list-view",
+  "keywords": [
+    "columns",
+    "text",
+    "image",
+    "heading"
+  ],
+  "apiVersion": 2,
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "columns-image-text.php"
+  },
+  "align": "full",
+  "supports": {
+    "align": true,
+    "anchor": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}

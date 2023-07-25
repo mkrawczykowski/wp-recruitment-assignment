@@ -21,14 +21,12 @@
         <?php
           if ($heading_pt_1 && $heading_pt_2)  : ?>
 
-            <div class="double-heading">
-              <h2 class="double-heading__heading"><?php echo $heading_pt_1; ?></h2>
-              <span class="double-heading__color">
-                <h2 class="double-heading__heading">
-                  <?php echo $heading_pt_2; ?>
-                </h2>
-              </span>
-            </div>
+            <?php
+              get_template_part( array(
+                'heading_pt_1' => $heading_pt_1,
+                'heading_pt_2' => $heading_pt_2
+              ))
+            ?>
 
             <?php
             echo $text;

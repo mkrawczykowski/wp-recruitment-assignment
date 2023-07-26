@@ -1,1 +1,66 @@
-.button {}
+@use '../variables' as variables;
+
+.button {
+  display: flex;
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: variables.pxtorem(15);
+    line-height: variables.pxtorem(34);
+    font-weight: 600;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: variables.$black;
+      color: variables.$white;
+      transition: all 0.3s ease;
+    }
+  }
+
+  &__gray {
+    a {
+      background-color: variables.$gray;
+      color: variables.$almostBlack;
+    }
+  }
+
+  &__green {
+    a {
+      background-color: variables.$green;
+      color: variables.$white;
+    }
+  }
+
+  &__left {
+    justify-content: flex-start;
+  }
+
+  &__center {
+    justify-content: center;
+  }
+
+  &__size1 {
+    a {
+      width: 192px;
+      height: 49px;
+    }
+  }
+
+  &__size2 {
+    a {
+      width: 310px;
+      height: 61px;
+    }
+
+  }
+
+  &__size3 {
+    width: 340px;
+    height: 61px;
+  }
+}

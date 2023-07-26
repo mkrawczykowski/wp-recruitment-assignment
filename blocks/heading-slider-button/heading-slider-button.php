@@ -71,4 +71,14 @@
 
         <?php endif; ?>
 
+        <?php
+          get_template_part('template-parts/components/button', '', array(
+            'label' => 'More',
+            'url' => get_post_type_archive_link('tune'),
+            'color'        => 'gray',
+            'align'        => 'center',
+            'size'        => 'size2'
+          ))
+        ?>
+
 </section>

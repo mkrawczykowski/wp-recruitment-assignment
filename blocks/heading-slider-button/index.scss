@@ -1,6 +1,16 @@
 @use '../../src/sass/variables' as variables;
 
 .heading-slider-button {
+  padding: 84px 0 40px 0;
+
+  .double-heading {
+    margin-bottom: 76px;
+  }
+
+  .button {
+    margin-top: 70px;
+  }
+
   .splide {
     border: 5px solid variables.$gray;
     width: 1264px;

@@ -13,8 +13,8 @@
 
 if ($url && $label) : ?>
   <div class="button<?php echo $class__color; ?><?php echo $class__align; ?><?php echo $class__size; ?>">
-    <a href="" class="button__link">
-      tekst
+    <a href="<?php echo $url; ?>" class="button__link">
+      <?php echo $label; ?>
     </a>
   </div>
 <?php endif; ?>

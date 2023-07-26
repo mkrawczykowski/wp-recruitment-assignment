@@ -14,15 +14,16 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <?php echo wp_get_attachment_image($imageID, '597', '', array());
+        <?php echo wp_get_attachment_image($imageID, 'small-medium', '', array());
       ?>
       </div>
       <div class="col">
         <?php
+        
           if ($heading_pt_1 && $heading_pt_2)  : ?>
 
             <?php
-              get_template_part( array(
+              get_template_part('template-parts/components/double-heading', '', array(
                 'heading_pt_1' => $heading_pt_1,
                 'heading_pt_2' => $heading_pt_2
               ))

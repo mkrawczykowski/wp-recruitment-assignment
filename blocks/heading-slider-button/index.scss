@@ -1,1 +1,113 @@
-.heading-slider-button {}
+@use '../../src/sass/variables' as variables;
+
+.heading-slider-button {
+  .splide {
+    border: 5px solid variables.$gray;
+    width: 1264px;
+    display: block;
+    margin: 0 auto;
+    padding: 13px;
+
+    .splide__track {
+      .splide__list {
+        .splide__slide {
+          display: flex;
+          flex-wrap: nowrap;
+
+          &-content {
+            margin-left: 31px;
+            margin-top: 22px;
+
+            .splide__slide-title {
+              font-family: 'Open Sans', sans-serif;
+              font-size: variables.pxtorem(26);
+              line-height: variables.pxtorem(32);
+              font-weight: 800;
+              color: variables.$blueGray;
+              margin: 0 0 2px 0;
+              padding: 0;
+              font-style: italic;
+            }
+
+            .splide__slide-info {
+              font-family: 'Open Sans', sans-serif;
+              font-size: variables.pxtorem(15);
+              line-height: variables.pxtorem(32);
+              font-weight: 600;
+              color: variables.$green;
+              margin: 0 0 21px 0;
+              padding: 0;
+              letter-spacing: 2.3px;
+            }
+
+            .splide__slide-list {
+              list-style: none;
+              margin: 0;
+              padding: 0 0 0 10px;
+
+              &-item {
+                font-family: 'Open Sans', sans-serif;
+                font-size: variables.pxtorem(17);
+                line-height: variables.pxtorem(30);
+                color: variables.$blueGray;
+                font-weight: 600;
+                margin: 0 0 9px 0;
+                padding: 0;
+                position: relative;
+
+                &:before {
+                  content: '';
+                  width: 10px;
+                  height: 10px;
+                  display: inline-block;
+                  background-color: variables.$green;
+                  position: relative;
+                  top: -2px;
+                  left: -10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .splide__arrows {
+      .splide__arrow {
+        width: 55px;
+        height: 55px;
+        background-color: variables.$gray;
+        border-radius: 0;
+        transition: all 0.3s ease;
+        opacity: 1;
+
+        &:disabled {
+          opacity: 0;
+        }
+
+        &:hover {
+          background-color: variables.$green;
+          transition: all 0.3s ease;
+
+          svg {
+            fill: variables.$white;
+            transition: all 0.3s ease;
+          }
+        }
+
+        &--next {
+          right: -2.1em;
+        }
+
+        &--prev {
+          left: -2.1em;
+        }
+
+        svg {
+          fill: variables.$green;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+}

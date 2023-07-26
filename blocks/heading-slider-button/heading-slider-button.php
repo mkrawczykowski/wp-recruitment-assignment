@@ -6,36 +6,69 @@
 ?>
 
 <section class="heading-slider-button">
-<div class="container">
-    <div class="row">
-      <div class="col">
+
         <?php
-          get_template_part( array(
+          get_template_part('template-parts/components/double-heading', '', array(
             'heading_pt_1' => $heading_pt_1,
-            'heading_pt_2' => $heading_pt_2
+            'heading_pt_2' => $heading_pt_2,
+            'align'        => 'center'
           ))
         ?>
 
+
+        <?php
+        $args = array(
+          'post_type' => 'tune',
+          'posts_per_page' => 2,
+          'order' => 'ASC',
+        );
+        $the_query = new WP_Query( $args ); ?>
+
+        <?php if ( $the_query->have_posts() ) : ?>
         <div class="splide" role="group" aria-label="Splide Basic HTML Example">
           <div class="splide__track">
             <ul class="splide__list">
-              <li class="splide__slide">
-                <?php echo wp_get_attachment_image($imageID, '597', '', array()); ?>
-                <div class="splide__slide-content">
-                  <h3 class="splide__slide-title"></h3>
-                  <p class="splide__slide-info"></p>
-                  <ul class="splide__slide-list">
-                    <li class="splide__slide-list-item"></li>
-                  </ul>
-                </div>
-              </li>
+                <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                    <li class="splide__slide">
+
+                      <?php
+                        $field_1 = get_field('field_1', get_the_ID());
+                        $field_2 = get_field('field_2', get_the_ID());
+                        $characteristics = get_field('characteristics', get_the_ID());
+                        $final_fields_content = '';
+                        $final_fields_content .= $field_1;
+                        $final_fields_content .= ($field_1 && $field_2) ? ' | ' : NULL;
+                        $final_fields_content .= $field_2 ? $field_2 : NULL;
+                      ?>
+                      
+                      <?php if ( get_the_post_thumbnail() ) : ?>
+                        <?php the_post_thumbnail('smallest'); ?>
+                      <?php endif; ?>
+
+                      <div class="splide__slide-content">
+                        <h3 class="splide__slide-title"><?php the_title(); ?></h3>
+                        <?php
+                          echo $final_fields_content ? '<p class="splide__slide-info">' . $final_fields_content . '</p>' : NULL;
+
+                          if($characteristics) : ?>
+                            <ul class="splide__slide-list">
+                            <?php foreach( $characteristics as $characteristic ) : ?>
+                              <li class="splide__slide-list-item">
+                                <?php echo $characteristic['characteristic']; ?>
+                              </li>  
+                            <?php endforeach; ?>
+                            </ul>
+                          <?php endif; ?>
+
+                      </div>
+                    </li>
+                <?php endwhile; ?>
             </ul>
           </div>
         </div>
 
+            <?php wp_reset_postdata(); ?>
 
-        
-      </div>
-    </div>
-  </div>
+        <?php endif; ?>
+
 </section>

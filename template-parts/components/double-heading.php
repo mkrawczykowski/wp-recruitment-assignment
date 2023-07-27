@@ -3,7 +3,7 @@
 <?php
   $heading_pt_1 = $args['heading_pt_1'] ? $args['heading_pt_1'] : NULL;
   $heading_pt_2 = $args['heading_pt_2'] ? $args['heading_pt_2'] : NULL;
-  $align = $args['align'];
+  $align = $args['align'] ? $args['align'] : 'left';
 
   $class_align = $align ? ' double-heading--' . $align : '';
 ?>

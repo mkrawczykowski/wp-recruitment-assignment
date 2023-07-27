@@ -25,7 +25,7 @@
         $the_query = new WP_Query( $args ); ?>
 
         <?php if ( $the_query->have_posts() ) : ?>
-        <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+        <div class="splide" id="splide-slider" role="group" aria-label="Splide Basic HTML Example">
           <div class="splide__track">
             <ul class="splide__list">
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
@@ -46,7 +46,9 @@
                       <?php endif; ?>
 
                       <div class="splide__slide-content">
+                      <a class="splide__slide-link-title" href="<?php the_title(); ?>">
                         <h3 class="splide__slide-title"><?php the_title(); ?></h3>
+                      </a>  
                         <?php
                           echo $final_fields_content ? '<p class="splide__slide-info">' . $final_fields_content . '</p>' : NULL;
 
@@ -72,7 +74,7 @@
         <?php endif; ?>
 
         <?php
-          get_template_part('template-parts/components/button', '', array(
+          get_template_part('template-parts/components/simple-button', '', array(
             'label' => 'More',
             'url' => get_post_type_archive_link('tune'),
             'color'        => 'gray',

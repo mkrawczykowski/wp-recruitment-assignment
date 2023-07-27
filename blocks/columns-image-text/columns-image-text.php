@@ -25,7 +25,8 @@
             <?php
               get_template_part('template-parts/components/double-heading', '', array(
                 'heading_pt_1' => $heading_pt_1,
-                'heading_pt_2' => $heading_pt_2
+                'heading_pt_2' => $heading_pt_2,
+                'align'        => 'left'
               ))
             ?>
 

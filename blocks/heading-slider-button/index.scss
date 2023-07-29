@@ -13,10 +13,13 @@
 
   .splide {
     border: 5px solid variables.$gray;
-    width: 1264px;
     display: block;
     margin: 0 auto;
     padding: 13px;
+
+    @include variables.media-up(xxl) {
+      width: 1264px;
+    }
 
     .splide__track {
       .splide__list {

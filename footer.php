@@ -1,6 +1,6 @@
 <?php defined('ABSPATH') or die; ?>    
     
-<!-- <footer class="footer">
+<footer class="footer">
   <div class="container">
     <div class="row row--footer">
       <?php 
@@ -33,7 +33,7 @@
       </div>
     </div>
   </div>   
-</footer> -->
+</footer>
 
   <?php wp_footer(); ?>
 

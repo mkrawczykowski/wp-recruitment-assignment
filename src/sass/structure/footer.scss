@@ -1,18 +1,67 @@
 @use '../variables' as variables;
 
 .footer {
-  background-color: variables.$almostBlack;
+  background-image: url('../../assets/footer-decorator.webp'), linear-gradient(to right, variables.$almostBlack, variables.$almostBlack);
+  background-position: left top;
+  background-repeat: no-repeat;
+  padding: 25px 0 25px 0;
 
-  p {
-    color: variables.$white;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    font-size: variables.pxtorem(14);
-    line-height: variables.pxtorem(24);
-    font-weight: 400;
+  @include variables.media-up(xl) {
+    padding: 50px 0 25px 0;
+  }
+
+  @include variables.media-up(xxl) {
+    padding: 75px 0 25px 0;
+  }
+
+  @include variables.media-up(xxxl) {
+    padding: 110px 0 25px 0;
+  }
+
+  .custom-logo-link {
+    margin-top: 11px;
+    display: inline-block;
+  }
+
+  .wp-block-media-text {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    &__media {
+      margin: 0px 14px 0 0;
+    }
+
+    &__content {
+      p {
+        color: variables.$white;
+        font-family: 'Open Sans', sans-serif;
+        font-size: variables.pxtorem(17);
+        line-height: variables.pxtorem(30);
+        font-weight: 400;
+        margin: 0;
+        padding: 0;
+
+        a {
+          color: variables.$white;
+          text-decoration: none;
+        }
+      }
+    }
   }
 
   &__copyright {
     text-align: center;
+    color: variables.$white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: variables.pxtorem(14);
+    line-height: variables.pxtorem(24);
+    font-weight: 400;
+    padding: 0;
+    margin: 10px 0 0 0;
+
+    @include variables.media-up(xl) {
+      margin: 24px 0 0 0;
+    }
   }
 }

@@ -1,22 +1,12 @@
 <?php defined('ABSPATH') or die; ?>
-<!--
-<section class="splide" aria-label="Splide Basic HTML Example">
-  <div class="splide__track">
-		<ul class="splide__list">
-			<li class="splide__slide">Slide 01</li>
-			<li class="splide__slide">Slide 02</li>
-			<li class="splide__slide">Slide 03</li>
-		</ul>
-  </div>
-</section>
 
 
 
-<section class="hero-slider">
+<section class="hero-slider splide" role="group" aria-label="slider">
   <?php
   if( have_rows('slides') ): ?>
-    <div class="swiper">
-      <div class="swiper-wrapper">
+    <div class="splide__track">
+		  <ul class="splide__list">
 
         <?php    
         while( have_rows('slides') ) : the_row();
@@ -29,8 +19,8 @@
           $button = $content['button'];
           $slide_image = $image['slide_image']; ?>
 
-          <div class="swiper-slide">
-            <div class="swiper-slide__background-image">
+          <li class="splide-slide">
+            <div class="splide-slide__background-image">
 							<?php echo wp_get_attachment_image($slide_image, '', '', array( 
                 'class' => 'img-responsive', 
                 'loading' => 'eager', 
@@ -38,11 +28,11 @@
               ));
                 ?>
 						</div>
-            <div class="swiper-slide__content">
+            <div class="splide-slide__content">
               <?php
-                echo $heading_1 ? '<h3 class="swiper-slide__heading-small">' . $heading_1 . '</h3>' : NULL;
-                echo $heading_2 ? '<h3 class="swiper-slide__heading-big">' . $heading_2 . '</h3>' : NULL;
-                echo $text ? '<div class="swiper-slide__text">' . $text . '</div>' : NULL;
+                echo $heading_1 ? '<h3 class="splide-slide__heading-small">' . $heading_1 . '</h3>' : NULL;
+                echo $heading_2 ? '<h3 class="splide-slide__heading-big">' . $heading_2 . '</h3>' : NULL;
+                echo $text ? '<div class="splide-slide__text">' . $text . '</div>' : NULL;
                 if ($link_label && $button){
                   echo '
                     <div class="button">
@@ -52,13 +42,12 @@
                 }
               ?>              
             </div>
-          </div>
+          </li>
         <?php  
         endwhile; ?>
 
-      </div>
+      </ul>
     </div>
   <?php
   endif; ?>
 </section>
--->

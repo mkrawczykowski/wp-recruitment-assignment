@@ -3,94 +3,99 @@
 .hero-slider {
   // height: 915px;
 
-  .swiper {
+  &.splide {
     height: 100%;
 
-    &-wrapper {
-      .swiper-slide {
-        position: relative;
+    .splide__track {
+      .splide__list {
+        display: block;
 
-        &__background-image {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          z-index: 1;
-        }
-
-        &__content {
-          // padding-top: 303px;
-          margin: 0 auto;
-          display: block;
+        .splide-slide {
           position: relative;
-          width: 100%;
-          height: 100%;
-          max-width: 1431px;
-          z-index: 2;
 
-          .swiper-slide__heading-small {
-            font-family: 'Open Sans', sans-serif;
-            font-size: variables.pxtorem(36);
-            line-height: 100%;
-            font-weight: 800;
-            text-transform: uppercase;
-            color: variables.$white;
-            margin: 0 0 10px 0;
+          &__background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
           }
 
-          .swiper-slide__heading-big {
-            font-family: 'Open Sans', sans-serif;
-            font-size: variables.pxtorem(60);
-            line-height: 100%;
-            font-weight: 800;
-            text-transform: uppercase;
-            color: variables.$white;
-            margin: 0;
-          }
+          &__content {
+            // padding-top: 303px;
+            margin: 0 auto;
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            max-width: 1431px;
+            z-index: 2;
 
-          .swiper-slide__text {
+            .splide-slide__heading-small {
+              font-family: 'Open Sans', sans-serif;
+              font-size: variables.pxtorem(36);
+              line-height: 100%;
+              font-weight: 800;
+              text-transform: uppercase;
+              color: variables.$white;
+              margin: 0 0 10px 0;
+            }
 
-            margin: 37px 0 0 0;
-
-            ul {
-              list-style-position: outside;
-              list-style: none;
+            .splide-slide__heading-big {
+              font-family: 'Open Sans', sans-serif;
+              font-size: variables.pxtorem(60);
+              line-height: 100%;
+              font-weight: 800;
+              text-transform: uppercase;
+              color: variables.$white;
               margin: 0;
-              padding: 0;
+            }
 
-              li {
-                padding-left: 21px;
-                position: relative;
-                font-family: 'Open Sans', sans-serif;
-                font-size: variables.pxtorem(16);
-                line-height: variables.pxtorem(30);
-                font-weight: 600;
-                color: variables.$white;
+            .splide-slide__text {
 
-                &:before {
-                  content: '';
-                  width: 10px;
-                  height: 10px;
-                  display: inline-block;
-                  background-color: variables.$white;
+              margin: 37px 0 0 0;
+
+              ul {
+                list-style-position: outside;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                  padding-left: 21px;
                   position: relative;
-                  left: -16px;
-                  margin-bottom: 4px;
-                }
-              }
+                  font-family: 'Open Sans', sans-serif;
+                  font-size: variables.pxtorem(16);
+                  line-height: variables.pxtorem(30);
+                  font-weight: 600;
+                  color: variables.$white;
 
-              p {
-                font-family: 'Open Sans', sans-serif;
-                font-size: variables.pxtorem(16);
-                line-height: variables.pxtorem(30);
-                font-weight: 600;
-                color: variables.$white;
+                  &:before {
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    display: inline-block;
+                    background-color: variables.$white;
+                    position: relative;
+                    left: -16px;
+                    margin-bottom: 4px;
+                  }
+                }
+
+                p {
+                  font-family: 'Open Sans', sans-serif;
+                  font-size: variables.pxtorem(16);
+                  line-height: variables.pxtorem(30);
+                  font-weight: 600;
+                  color: variables.$white;
+                }
               }
             }
           }
         }
       }
     }
+
   }
 }

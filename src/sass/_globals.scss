@@ -1,7 +1,7 @@
 @use './variables' as variables;
 
 // * {
-//   outline: 1px solid #19ff04;
+//   outline: 1px solid #1a01ff;
 //   background-color: #b1ddad;
 // }
 
@@ -12,11 +12,11 @@ html {
   scrollbar-width: thin;
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-  // background-color: variables.$purple1;
-}
+// ::-webkit-scrollbar {
+//   width: 8px;
+//   height: 8px;
+//   // background-color: variables.$purple1;
+// }
 
 ::-webkit-scrollbar-thumb {
   // background: variables.$pink1;
@@ -35,12 +35,12 @@ img {
 }
 
 .container {
-  width: 100%;
+  max-width: 100%;
   padding: 0 20px;
   margin: 0 auto;
 
   @include variables.media-up(xxl) {
-    max-width: 1728px;
+    max-width: 1238px;
   }
 
   .row {
@@ -53,6 +53,13 @@ img {
     &--footer {
       .col {
         flex-grow: 1;
+        margin-bottom: 20px;
+
+        &:first-of-type {
+          @include variables.media-down(xl) {
+            width: 100%;
+          }
+        }
       }
     }
 
